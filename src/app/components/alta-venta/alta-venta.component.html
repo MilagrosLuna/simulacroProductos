@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="alta-venta-form">
+    <h2>Alta de Venta</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form" class="formulario">
+      <div *ngIf="selectedProd">
+        <h3>Producto Seleccionado</h3>
+        <p>Descripción: {{ selectedProd.descripcion }}</p>
+        <p>Tipo: {{ selectedProd.tipo }}</p>
+        <p>Fecha de Vencimiento: {{ selectedProd.fechaDeVencimiento }}</p>
+        <p>Precio: {{ selectedProd.precio }}</p>
+        <img
+          [src]="selectedProd.foto"
+          alt="{{ selectedProd.nombre }}"
+          height="50"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="fechaDeVenta">Fecha de Venta:</label>
+        <input type="date" id="fechaDeVenta" formControlName="fechaDeVenta" />
+        <div
+          *ngIf="
+            form.controls['fechaDeVenta'].hasError('required') &&
+            form.controls['fechaDeVenta'].touched
+          "
+        >
+          <small class="invalid"
+            >Debe ingresar la fecha de venta del producto.</small
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="cantidad">Cantidad de productos:</label>
+        <input
+          type="number"
+          id="cantidad"
+          formControlName="cantidad"
+          placeholder="cantidad"
+        />
+        <div *ngIf="form.controls['cantidad'].errors != null">
+          <small
+            class="invalid"
+            *ngIf="
+              form.controls['cantidad'].errors!['required'] &&
+              form.controls['cantidad'].touched
+            "
+            >Debe ingresar la cantidad del producto.
+          </small>
+          <small
+            class="invalid"
+            *ngIf="form.controls['cantidad'].errors['min']"
+          >
+            La cantidad debe ser mayor o igual a 1.
+          </small>
+        </div>
+      </div>
+      <button type="submit">Guardar Producto de Venta</button>
+    </form>
+  </div>
+  <app-productos-venta
+    (productoSeleccionado)="OnProdSelected($event)"
+  ></app-productos-venta>
+</div>

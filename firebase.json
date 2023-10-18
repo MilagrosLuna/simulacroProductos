@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "parcial2222",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

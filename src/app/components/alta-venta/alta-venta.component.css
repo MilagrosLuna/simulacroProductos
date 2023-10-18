@@ -1,0 +1,76 @@
+/* Estilos para el formulario de alta de venta */
+.container {
+  display: flex;
+  justify-content: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.alta-venta-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.alta-venta-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.alta-venta-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.alta-venta-form input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.alta-venta-form input[type="text"]:focus {
+  border-color: #3f51b5;
+}
+
+.alta-venta-form button {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.alta-venta-form button:hover {
+  background-color: #2a3e94;
+}
+
+body,
+h2,
+label,
+p,
+small,
+.form-control,
+.btn-primary,
+.mt-3 a {
+  font-family: "Roboto", sans-serif;
+}
+
+.invalid {
+  color: red;
+}

@@ -1,0 +1,19 @@
+<div class="country-list">
+  <h1>Lista de productos</h1>
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Buscar producto"
+    (input)="filterProds()"
+  />
+  <div class="cards">
+    <div
+      class="card"
+      *ngFor="let producto of filteredProd"
+      (click)="selectProd(producto)"
+      [ngClass]="{ selected: producto === selectedProd }"
+    >
+      <h2>{{ producto.descripcion }}</h2>
+    </div>
+  </div>
+</div>

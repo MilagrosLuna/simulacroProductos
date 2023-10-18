@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "labo4-7d1e4": {
+      "hosting": {
+        "parcial2222": [
+          "labo4-7d1e4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "labo4-7d1e4"
+  }
+}

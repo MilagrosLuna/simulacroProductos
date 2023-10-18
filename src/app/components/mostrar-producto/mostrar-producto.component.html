@@ -1,0 +1,13 @@
+<p>PRODUCTO ENCONTRADP</p>
+<div class="card">
+  <div class="card-body">
+    <p class="card-text">{{ producto.descripcion }}</p>
+    <p class="card-text">
+      Fecha de Vencimiento: {{ producto.fechaDeVencimiento }}
+    </p>
+    <p class="card-text">Precio: {{ producto.precio }}</p>
+    <p class="card-text">Tipo: {{ producto.tipo }}</p>
+    <img [src]="producto.foto" alt="{{ producto.nombre }}" height="50" />
+    
+  </div>
+</div>

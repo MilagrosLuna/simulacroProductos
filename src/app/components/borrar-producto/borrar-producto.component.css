@@ -1,0 +1,51 @@
+/* Estilos para la tarjeta del producto */
+.card {
+    width: 300px; /* Ajusta el ancho de la tarjeta según tus preferencias */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    color: #fff;
+  }
+  
+  /* Estilos para el botón de eliminar */
+  .card .btn-danger {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para centrar el botón de eliminar */
+  .card .btn-danger {
+    text-align: center;
+  }
+  
+  /* Estilos para el botón de eliminar al pasar el mouse */
+  .card .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  

@@ -1,0 +1,18 @@
+/* styles.css o tu archivo de estilos de componente */
+
+.menu-button {
+  background-color: #007bff; /* Cambia el color de fondo a azul, puedes ajustarlo a tus necesidades */
+  color: #fff; /* Cambia el color del texto a blanco */
+  padding: 10px 20px; /* Ajusta el espaciado interior del botón */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 4px; /* Agrega esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  margin: 5px; /* Agrega margen entre los botones si es necesario */
+  text-transform: uppercase; /* Cambia el texto a mayúsculas */
+}
+
+.menu-button:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Agrega más estilos según tus preferencias */

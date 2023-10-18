@@ -1,0 +1,33 @@
+<table>
+    <thead>
+      <tr>
+        <th>Descripción</th>
+        <th>Fecha de vencimiento</th>
+        <th>Precio</th>
+        <th>Tipo</th>
+        <th>Fecha de venta</th>
+        <th>Cantidad</th>
+        <th>Foto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let producto of productos">
+        <tr
+          (click)="selectPeli(producto)"
+          [ngClass]="{ selected: producto === productoSele }"
+        >
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.fechaDeVencimiento }}</td>
+          <td>{{ producto.precio }}</td>
+          <td>{{ producto.tipo }}</td>
+          
+          <td>{{ producto.fechaDeVenta }}</td>
+          <td>{{ producto.cantidad }}</td>
+          <td>
+            <img [src]="producto.foto" alt="{{ producto.nombre }}" height="50" />
+          </td>
+        </tr>        
+      </ng-container>
+    </tbody>
+  </table>
+  

@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="alta-producto-form">
+      <h2>Alta de Producto</h2>
+      <form (ngSubmit)="onSubmit()" [formGroup]="form" class="formulario">
+        <div class="form-group">
+          <label for="descripcion">Descripción del producto:</label>
+          <input
+            type="text"
+            id="descripcion"
+            placeholder="Descripción"
+            formControlName="descripcion"
+          />
+          <div *ngIf="form.controls['descripcion'].hasError('required') && form.controls['descripcion'].touched">
+            <small class="invalid">Debe ingresar la descripción del producto.</small>
+          </div>
+        </div>
+        <div class="form-group">
+            <label>Tipo del producto:</label>
+            <div *ngFor="let tipo of tipos">
+              <label>
+                <input
+                  type="radio"
+                  formControlName="tipo"
+                  [value]="tipo"
+                />
+                {{ tipo }}
+              </label>
+            </div>
+            <div *ngIf="form.controls['tipo'].hasError('required') && form.controls['tipo'].touched">
+              <small class="invalid">Debe seleccionar un tipo para el producto.</small>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="fechaDeVencimiento">Fecha de Vencimiento:</label>
+          <input
+            type="date"
+            id="fechaDeVencimiento"
+            formControlName="fechaDeVencimiento"
+          />
+          <div *ngIf="form.controls['fechaDeVencimiento'].hasError('required') && form.controls['fechaDeVencimiento'].touched">
+            <small class="invalid">Debe ingresar la fecha de vencimiento del producto.</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="precio">Precio del producto:</label>
+          <input
+            type="number"
+            id="precio"
+            placeholder="Precio"
+            formControlName="precio"
+          />
+          <div *ngIf="form.controls['precio'].errors != null">
+            <small
+              class="invalid"
+              *ngIf="
+                form.controls['precio'].errors!['required'] &&
+                form.controls['precio'].errors!['required'] &&
+                form.controls['precio'].touched
+              "
+              >Debe ingresar el precio del producto.
+            </small>
+            <small class="invalid" *ngIf="form.controls['precio'].errors['min']">
+              El precio debe ser mayor o igual a $0.
+            </small>
+            <small class="invalid" *ngIf="form.controls['precio'].errors['max']">
+                El precio debe ser menor o igual a $1000.
+            </small>
+          </div>
+
+
+        </div>
+        <button type="submit">Guardar Producto</button>
+      </form>
+    </div>
+  </div>
+  
